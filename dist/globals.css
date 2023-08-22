@@ -1,0 +1,104 @@
+:root {
+  --nav-height: 72px;
+  --nav-height-mobile: 48px;
+
+  --hamburger-width: 20px;
+  --hamburger-height: 3px;
+
+  --sidebar-width: 145px;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+.flip-horizontal {
+  transform: scaleX(-1);
+}
+.flip-vertical {
+  transform: scaleY(-1);
+}
+
+/* HAMBURGER */
+
+#menu-button {
+  display: none;
+  appearance: none;
+}
+
+.menu-container {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 5px;
+  /* wystarczy zmienic gap na 13px i wyjdzie piekna strzalka! */
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid rgb(209 213 219);
+  border-radius: 5px;
+  background-color: #fff;
+  /* inline-flex do buttona */
+}
+
+.menu-container span {
+  width: var(--hamburger-width);
+  height: var(--hamburger-height);
+  background-color: #111;
+  border-radius: 10px;
+  pointer-events: none;
+  transition:
+    transform 400ms ease-in-out,
+    opacity 200ms;
+}
+
+#menu-button:checked + label .top {
+  transform: translateY(8px) rotate(405deg);
+}
+
+#menu-button:checked + label .bottom {
+  transform: translateY(-8px) rotate(-405deg);
+}
+
+#menu-button:checked + label .middle {
+  opacity: 0;
+}
+
+/* NAVBAR */
+
+.menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: calc(-1.1 * var(--sidebar-width));
+  top: 100%;
+  transition: left 400ms ease-in-out;
+  list-style-type: none;
+  width: auto;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: #fff;
+  align-items: center;
+}
+
+.menu > * {
+  width: 100%;
+  padding: 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+}
+
+.menu > :last-child {
+  border-bottom: unset;
+}
+
+#menu-button:checked ~ .menu {
+  left: 0%;
+}
+
+#menu-button:checked ~ .menu > *:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ::-webkit-scrollbar {
+    display: none;
+  } */

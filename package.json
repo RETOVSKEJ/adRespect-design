@@ -1,0 +1,26 @@
+{
+  "name": "zadanie_rekrutacyjne_adrespect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "build": "postcss ./dist/style.css -o ./dist/output.css",
+    "prod": "watch \"npm run build\" ./dist",
+    "dev": "tailwindcss -i ./dist/style.css -o ./dist/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.0.2",
+    "prettier-plugin-tailwindcss": "^0.5.3",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.15",
+    "masonry-layout": "^4.2.2",
+    "postcss-cli": "^10.1.0",
+    "smooth-scrollbar": "^8.8.4",
+    "watch": "^1.0.2"
+  }
+}

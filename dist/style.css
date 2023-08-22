@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  button,
+  a {
+    @apply hover:brightness-125;
+  }
+
+  :where(h2, h3) {
+    @apply font-title;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  :where(p, span) {
+    @apply tracking-[-0.1px] text-text;
+  }
+
+  .navi {
+    @apply font-body text-xs text-accent;
+  }
+
+  .icon {
+    @apply mx-2 flex w-4 items-center;
+  }
+
+  .big-icon {
+    @apply mx-2 h-10 w-10;
+  }
+
+  .btn {
+    @apply rounded-full border px-6 pb-3.5 pt-3 font-light hover:border hover:border-hvr hover:bg-hvr hover:text-secondary;
+  }
+
+  .btn-green {
+    @apply btn border-accent bg-accent text-white;
+  }
+  .btn-white {
+    @apply btn border-white bg-secondary text-accent;
+  }
+
+  .btn-transparent {
+    @apply btn border border-accent bg-transparent font-medium text-accent;
+  }
+
+  .cards {
+    @apply lg:m-default flex flex-col justify-around gap-8 text-text max-md:px-6 md:flex-row md:gap-4 lg:gap-8 xl:gap-16;
+  }
+  .card {
+    @apply rounded-[28px] bg-white p-10 md:px-8 md:py-10 lg:px-10 lg:py-12;
+  }
+  .card-title {
+    @apply mt-8 text-[28px] tracking-tighter;
+  }
+  .card-desc {
+    @apply mt-3 text-sm;
+  }
+  .card-link {
+    @apply relative mt-6 flex w-fit gap-0.5 text-accent after:absolute after:top-[105%] after:h-px after:w-[96%] after:bg-accent lg:mt-16;
+  }
+
+  .grid-gutter-sizer {
+    @apply w-0 sm:w-[10%] lg:w-[5%];
+  }
+
+  .grid-masonry-sizer {
+    @apply w-full sm:w-[45%] lg:w-[30%];
+  }
+  .grid-masonry-item {
+    @apply grid-masonry-sizer mb-[42px] text-center [&>img]:inline-block sm:[&>img]:block;
+  }
+
+  .m-default {
+    @apply mx-4 lg:mx-[89px];
+  }
+  .m-default-big {
+    @apply mx-12 lg:mx-[200px];
+  }
+
+  .p-default {
+    @apply px-4 lg:px-[89px];
+  }
+  .p-default-big {
+    @apply px-12 lg:px-[200px];
+  }
+
+  .mx-mobile {
+    @apply max-sm:mx-4;
+  }
+
+  .search-w {
+    @apply w-4/5 sm:w-[240px] lg:w-[280px];
+  }
+}

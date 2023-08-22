@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadanie Rekrutacyjne AdRespect - Michał Silski</title>
+    <link rel="stylesheet" href="./globals.css" />
+    <link rel="stylesheet" href="./output.css" />
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="./script.js" defer></script>
+    <script src="./searchBar.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    id="body"
+    class="border-box w-100 overflow-x-hidden scroll-smooth font-body antialiased"
+  >
+    <nav
+      id="mobile-nav"
+      class="fixed left-0 top-0 z-50 flex w-full items-center justify-between px-2 sm:hidden"
+    >
+      <div id="hamburger-btn">
+        <input id="menu-button" type="checkbox" />
+        <label class="menu-container" for="menu-button">
+          <span class="top"></span>
+          <span class="middle"></span>
+          <span class="bottom"></span>
+        </label>
+        <ul class="menu">
+          <li class="logo p-default z-40 bg-white">
+            <img
+              src="./../assets/icons/giarddesign-black.svg"
+              alt="logo"
+              class="logo"
+            />
+          </li>
+          <li class="relative">
+            <button class="peer flex items-center">
+              <span>Oferta</span
+              ><img class="mx-1" src="./../assets/icons/downtick.svg" />
+            </button>
+            <ul
+              id="dropdown"
+              class="dropdown-offer absolute left-[110px] top-[90%] z-50 hidden w-max flex-col divide-y rounded-xl border bg-white text-lg peer-focus-within:flex peer-focus-within:translate-y-2"
+            >
+              <li class="group px-5 py-4">
+                <a
+                  class="flex items-center gap-6 transition group-hover:translate-x-2"
+                  href="#offer"
+                >
+                  <img src="./../assets/icons/pencil.svg" class="w-8" />
+                  <span>Projekty</span>
+                </a>
+              </li>
+              <li class="group px-5 py-4">
+                <a
+                  class="flex items-center gap-6 transition group-hover:translate-x-2"
+                  href="#offer"
+                >
+                  <img src="./../assets/icons/eye.svg" class="w-8" />
+                  <span>Wizualizacje</span>
+                </a>
+              </li>
+              <li class="group px-5 py-4">
+                <a
+                  class="flex items-center gap-6 transition group-hover:translate-x-2"
+                  href="#offer"
+                >
+                  <img src="./../assets/icons/stars.svg" class="w-8" />
+                  <span>Realizacje</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#about" class="whitespace-nowrap">O firmie</a></li>
+          <li><a href="#realizations">Realizacje</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </div>
+      <div
+        id="search-bar-mb"
+        class="fixed right-2 flex items-center text-gray-700 focus-within:right-0 focus-within:w-full focus-within:justify-evenly"
+      >
+        <button
+          id="search-btn-mb"
+          class="peer relative mt-0.5 rounded-md border border-gray-300 bg-white py-2.5"
+        >
+          <img class="icon w-5" src="./../assets/icons/search-icon.svg" />
+        </button>
+        <input
+          id="search-input-mb"
+          type="text"
+          class="peer/results focus:search-w peer-focus-within:search-w w-0 rounded-lg py-2 outline-none transition-[width] focus:border focus:border-gray-200 focus:px-2 peer-focus-within:border peer-focus-within:border-gray-200"
+        />
+        <div
+          id="search-results"
+          class="search-w absolute right-0 top-[100%] mr-4 hidden flex-1 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 peer-focus/results:flex"
+        >
+          <ul
+            class="border-1px flex-1 flex-col divide-y rounded-sm border bg-white"
+          >
+            <li class="group px-8 py-6">
+              <a
+                class="flex items-center gap-6 transition group-hover:translate-x-2"
+                href="#offer"
+              >
+                <img src="./../assets/icons/pencil.svg" class="w-8" />
+                <span>Projekty</span>
+              </a>
+            </li>
+            <li class="group px-8 py-6">
+              <a
+                class="flex items-center gap-6 transition group-hover:translate-x-2"
+                href="#offer"
+              >
+                <img src="./../assets/icons/eye.svg" class="w-8" />
+                <span>Wizualizacje</span>
+              </a>
+            </li>
+            <li class="group px-8 py-6">
+              <a
+                class="flex items-center gap-6 transition group-hover:translate-x-2"
+                href="#offer"
+              >
+                <img src="./../assets/icons/stars.svg" class="w-8" />
+                <span>Realizacje</span>
+              </a>
+            </li>
+            <li class="group px-8 py-4">
+              <a
+                class="flex items-center gap-6 transition group-hover:translate-x-2"
+                href="#Ofirmie"
+              >
+                <span>O firmie</span>
+              </a>
+            </li>
+            <li class="group px-8 py-4">
+              <a
+                class="flex items-center gap-6 transition group-hover:translate-x-2"
+                href="#contact"
+              >
+                <span>Kontakt</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav
+      id="pc-nav"
+      class="p-default flex-center fixed left-0 top-0 z-40 h-[var(--nav-height)] w-full gap-8 overflow-y-visible bg-white font-body text-sm tracking-[-0.1px] max-sm:hidden md:absolute"
+    >
+      <div class="logo p-default absolute left-0 z-50 bg-white pr-2">
+        <img
+          src="./../assets/icons/giarddesign-black.svg"
+          alt="logo"
+          class="logo"
+        />
+      </div>
+
+      <div class="relative ml-auto">
+        <button class="peer flex items-center">
+          <span>Oferta</span
+          ><img class="mx-1" src="./../assets/icons/downtick.svg" />
+        </button>
+        <ul
+          id="dropdown"
+          class="dropdown-offer absolute left-[-110%] top-[150%] z-50 hidden w-max flex-col divide-y rounded-xl border bg-white text-lg peer-focus-within:flex peer-focus-within:translate-y-2"
+        >
+          <li class="group px-8 py-6">
+            <a
+              class="flex items-center gap-6 transition group-hover:translate-x-2"
+              href="#offer"
+            >
+              <img src="./../assets/icons/pencil.svg" class="w-8" />
+              <span>Projekty</span>
+            </a>
+          </li>
+          <li class="group px-8 py-6">
+            <a
+              class="flex items-center gap-6 transition group-hover:translate-x-2"
+              href="#offer"
+            >
+              <img src="./../assets/icons/eye.svg" class="w-8" />
+              <span>Wizualizacje</span>
+            </a>
+          </li>
+          <li class="group px-8 py-6">
+            <a
+              class="flex items-center gap-6 transition group-hover:translate-x-2"
+              href="#offer"
+            >
+              <img src="./../assets/icons/stars.svg" class="w-8" />
+              <span>Realizacje</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <a href="#about" class="whitespace-nowrap">O firmie</a>
+      <a href="#realizations">Realizacje</a>
+      <a href="#contact">Kontakt</a>
+      <div id="search-bar" class="relative flex items-center text-gray-700">
+        <button id="search-btn" class="peer relative py-1">
+          <img class="icon w-5" src="./../assets/icons/search-icon.svg" />
+        </button>
+        <input
+          id="search-input"
+          type="text"
+          class="peer/results focus:search-w peer-focus-within:search-w w-0 rounded-lg py-2 outline-none transition-[width] focus:border focus:border-gray-200 focus:px-2 peer-focus-within:border peer-focus-within:border-gray-200"
+        />
+        <div
+          id="search-results"
+          class="search-w absolute left-[36px] top-[100%] hidden flex-1 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 peer-focus/results:flex"
+        >
+          <ul
+            class="border-1px flex-1 flex-col divide-y rounded-sm border bg-white"
+          >
+            <li class="group px-8 py-6">
+              <a
+                class="flex items-center gap-6 transition group-hover:translate-x-2"
+                href="#offer"
+              >
+                <img src="./../assets/icons/pencil.svg" class="w-8" />
+                <span>Projekty</span>
+              </a>
+            </li>
+            <li class="group px-8 py-6">
+              <a
+                class="flex items-center gap-6 transition group-hover:translate-x-2"
+                href="#offer"
+              >
+                <img src="./../assets/icons/eye.svg" class="w-8" />
+                <span>Wizualizacje</span>
+              </a>
+            </li>
+            <li class="group px-8 py-6">
+              <a
+                class="flex items-center gap-6 transition group-hover:translate-x-2"
+                href="#offer"
+              >
+                <img src="./../assets/icons/stars.svg" class="w-8" />
+                <span>Realizacje</span>
+              </a>
+            </li>
+            <li class="group px-8 py-4">
+              <a
+                class="flex items-center gap-6 transition group-hover:translate-x-2"
+                href="#Ofirmie"
+              >
+                <span>O firmie</span>
+              </a>
+            </li>
+            <li class="group px-8 py-4">
+              <a
+                class="flex items-center gap-6 transition group-hover:translate-x-2"
+                href="#contact"
+              >
+                <span>Kontakt</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="relative z-10 font-medium sm:top-[var(--nav-height)]">
+      <header
+        class="carousel relative flex justify-between overflow-hidden bg-primary max-sm:pt-8"
+      >
+        <!-- <div
+          id="slide"
+          class="w-100% absolute right-[100%] m-auto flex justify-center gap-16"
+        >
+          <div
+            id="header"
+            class="m-default my-32 flex max-w-[500px] flex-col gap-16"
+          >
+            <h2 id="header__title" class="font-title text-6xl leading-[70px]">
+              Nowoczesna aranżacja Twojego ogrodu
+            </h2>
+            <p id="header__desc" class="font-body">
+              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+              realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
+              podejściem do każdego projektu.
+            </p>
+            <div id="header__buttons" class="flex justify-between">
+              <button class="btn-green">Skontaktuj się z nami</button>
+              <button class="btn-transparent flex items-center">
+                Zobacz nasze realizacje
+                <img src="./../assets/icons/arrow-down.svg" class="icon" />
+              </button>
+            </div>
+          </div>
+          <img src="./../assets/images/header.png" />
+        </div> -->
+        <div
+          id="slide2"
+          class="flex w-full flex-col justify-between md:flex-row md:gap-16"
+        >
+          <div
+            id="header"
+            class="lg:m-default mx-2 my-12 flex max-w-[550px] flex-col gap-8 sm:max-lg:mx-8 md:my-24 md:max-w-[500px] md:gap-16 lg:max-2xl:mr-[5%] xl:my-32"
+          >
+            <h2
+              id="header__title"
+              class="pc:text-6xl/[70px] font-title text-4xl lg:text-5xl"
+            >
+              Nowoczesna aranżacja Twojego ogrodu
+            </h2>
+            <p id="header__desc" class="font-body">
+              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+              realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
+              podejściem do każdego projektu.
+            </p>
+            <div
+              id="header__buttons"
+              class="flex flex-col gap-4 sm:flex-row sm:justify-between md:flex-col lg:flex-row"
+            >
+              <button class="btn-green">Skontaktuj się z nami</button>
+              <button
+                class="btn-transparent flex items-center justify-center text-center"
+              >
+                Zobacz nasze realizacje
+                <img src="./../assets/icons/arrow-down.svg" class="icon mr-0" />
+              </button>
+            </div>
+          </div>
+          <img
+            class="h-full max-h-[450px] w-full object-cover max-md:order-2 md:max-h-[780px] md:w-1/2 xl:max-h-[740px]"
+            src="./../assets/images/header.png"
+          />
+        </div>
+        <!-- <div
+          id="slide3"
+          class="w-100% absolute left-[100%] m-auto flex justify-center gap-16"
+        >
+          <div
+            id="header"
+            class="m-default my-32 flex max-w-[500px] flex-col gap-16"
+          >
+            <h2 id="header__title" class="font-title text-6xl leading-[70px]">
+              Nowoczesna aranżacja Twojego ogrodu
+            </h2>
+            <p id="header__desc" class="font-body">
+              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+              realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
+              podejściem do każdego projektu.
+            </p>
+            <div id="header__buttons" class="flex justify-between">
+              <button class="btn-green">Skontaktuj się z nami</button>
+              <button class="btn-transparent flex items-center">
+                Zobacz nasze realizacje
+                <img src="./../assets/icons/arrow-down.svg" class="icon" />
+              </button>
+            </div>
+          </div>
+          <img src="./../assets/images/header.png" />
+        </div> -->
+        <div
+          id="carousel__buttons"
+          class="absolute bottom-0 right-0 flex items-center justify-center bg-white"
+        >
+          <button id="carousel__button--prev" class="p-8">
+            <img src="./../assets/icons/arrow-left.svg" class="mx-1 w-6" />
+          </button>
+          <button id="carousel__button--next" class="p-8">
+            <img src="./../assets/icons/arrow-right.svg" class="mx-1 w-6" />
+          </button>
+        </div>
+      </header>
+      <section
+        id="offer"
+        class="offer bg-secondary pb-16 pt-12 md:pb-[160px] md:pt-[120px]"
+      >
+        <div
+          id="offer__header"
+          class="mx-mobile mb-8 flex flex-col gap-4 sm:mx-[100px] md:mx-[200px] md:mb-[80px] md:max-w-[710px]"
+        >
+          <span id="offer__navi" class="navi">Oferta</span>
+          <div class="flex flex-col gap-8">
+            <h3 id="offer__title" class="font-title text-4xl sm:text-5xl">
+              Działamy <em>kompleksowo</em>
+            </h3>
+            <p id="offer__desc" class="tracking-[-0.1px]">
+              Oferujemy kompletną obsługę inwestycji terenów zielonych.
+              Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne.
+              Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w
+              życie, a na każdym etapie posłużymy radą i wieloletnim
+              doświadczeniem.
+            </p>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <img
+              src="./../assets/icons/pencil.svg"
+              class="big-icon hover:fill-red-500"
+              alt="icon"
+            />
+            <h3 class="card-title">Projekty</h3>
+            <p class="card-desc">
+              Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
+              wykorzystaniem istniejącej przestrzeni.
+            </p>
+            <a class="card-link"
+              >Dowiedz się więcej
+              <img src="./../assets/icons/arrow-right-sm.svg" class="icon"
+            /></a>
+          </div>
+          <div class="card">
+            <img src="./../assets/icons/eye.svg" class="big-icon" alt="icon" />
+            <h3 class="card-title">Wizualizacje</h3>
+            <p class="card-desc">
+              Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru
+              animowanego w technologii 3D.
+            </p>
+            <a class="card-link"
+              >Dowiedz się więcej
+              <img src="./../assets/icons/arrow-right-sm.svg" class="icon"
+            /></a>
+          </div>
+          <div class="card">
+            <img
+              src="./../assets/icons/stars.svg"
+              class="big-icon"
+              alt="icon"
+            />
+
+            <h3 class="card-title">Realizacje</h3>
+            <p class="card-desc">
+              Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i
+              zaawansowanych technologii.
+            </p>
+            <a class="card-link"
+              >Dowiedz się więcej
+              <img src="./../assets/icons/arrow-right-sm.svg" class="icon" />
+            </a>
+          </div>
+        </div>
+      </section>
+      <section
+        id="about"
+        class="about relative flex flex-col bg-accent text-secondary sm:flex-row sm:gap-[10%] xl:gap-16"
+      >
+        <img
+          class="h-auto object-cover max-sm:order-2 max-sm:h-[440px] sm:w-5/12 lg:w-[45%] xl:w-1/2"
+          src="./../assets/images/about.png"
+          alt="Jedna z naszych realizacji"
+        />
+        <div
+          id="about__header"
+          class="mx-mobile flex items-center max-sm:mb-8 max-sm:mt-12 sm:mr-[9%] sm:max-xl:my-8 sm:max-lg:mb-16 sm:max-lg:mt-12 xl:mr-[92px] xl:pl-24"
+        >
+          <div class="flex flex-col justify-center gap-4">
+            <span id="about__navi" class="navi font-light text-secondary"
+              >O firmie</span
+            >
+            <div class="flex flex-col gap-6 xl:gap-8">
+              <h2
+                id="about__title"
+                class="w-3/4 font-title text-4xl leading-[115%] sm:w-1/2 lg:text-5xl"
+              >
+                Tworzymy z <em class="font-body font-[500]">pasją</em>
+              </h2>
+              <p
+                id="about__desc"
+                class="font-light tracking-[-0.1px] text-secondary"
+              >
+                Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
+                wykwalifikowani projektanci oraz architekci, których zadaniem
+                jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza
+                specjalizacja to przestrzenie nowoczesne, które charakteryzuje
+                minimalizm, geometria i elegancka prostota. Tworzymy ogrody
+                małoobsługowe, dostosowane do współczesnego trybu życia.
+              </p>
+              <a
+                href="#"
+                class="btn-transparent mt-2 flex w-fit border-secondary font-light text-secondary hover:bg-hvr hover:text-secondary max-sm:m-auto lg:mt-9"
+              >
+                Poznaj nas bliżej
+                <svg
+                  class="icon mr-0 justify-center"
+                  viewBox="0 0 16 16"
+                  fill="white"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.99528 -1.20755e-06L7.09959 0.895696L13.5769 7.36358L-7.5502e-07 7.36358L-6.43745e-07 8.63642L13.5675 8.63642L7.09959 15.1043L7.99529 16L16 7.99529L7.99528 -1.20755e-06Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="realizations"
+        class="realizations relative flex flex-col gap-24 bg-primary max-sm:gap-12"
+      >
+        <div
+          id="realizations__header"
+          class="mx-mobile mt-12 flex flex-col justify-between gap-4 sm:mx-[80px] sm:mt-[60px] md:mx-[160px] lg:mt-[120px]"
+        >
+          <span id="realizations__navi" class="navi">Realizacje</span>
+          <h2 id="realizations__title" class="font-title text-4xl sm:text-5xl">
+            Nasze <em>projekty</em>
+          </h2>
+        </div>
+
+        <div class="grid-masonry left-1/2 -translate-x-1/2">
+          <div class="grid-masonry-sizer"></div>
+          <div class="grid-gutter-sizer"></div>
+          <div class="grid-masonry-item">
+            <img
+              src="./../assets/images/Photo-10.png"
+              alt="Jeden z naszych projektów"
+            />
+          </div>
+          <div class="grid-masonry-item">
+            <img
+              src="./../assets/images/Photo-9.png"
+              alt="Jeden z naszych projektów"
+            />
+          </div>
+          <div class="grid-masonry-item">
+            <img
+              src="./../assets/images/Photo-8.png"
+              alt="Jeden z naszych projektów"
+            />
+          </div>
+          <div class="grid-masonry-item">
+            <img
+              src="./../assets/images/Photo-7.png"
+              alt="Jeden z naszych projektów"
+            />
+          </div>
+          <div class="grid-masonry-item">
+            <img
+              src="./../assets/images/Photo-6.png"
+              alt="Jeden z naszych projektów"
+            />
+          </div>
+          <div class="grid-masonry-item">
+            <img
+              src="./../assets/images/Photo-9.png"
+              alt="Jeden z naszych projektów"
+            />
+          </div>
+          <div class="grid-masonry-item">
+            <img
+              src="./../assets/images/Photo-4.png"
+              alt="Jeden z naszych projektów"
+            />
+          </div>
+          <div class="grid-masonry-item">
+            <img
+              src="./../assets/images/Photo-3.png"
+              alt="Jeden z naszych projektów"
+            />
+          </div>
+          <div class="grid-masonry-item">
+            <img
+              src="./../assets/images/Photo-2.png"
+              alt="Jeden z naszych projektów"
+            />
+          </div>
+        </div>
+        <div
+          class="absolute bottom-10 z-30 h-[1050px] w-full bg-gradient-to-b from-transparent via-primary/70 to-primary"
+        ></div>
+        <div class="absolute bottom-20 left-0 right-0 z-50">
+          <button
+            id="expand-btn"
+            class="btn-transparent m-auto flex items-center justify-between gap-2 border-black text-text"
+          >
+            Rozwiń
+            <svg
+              width="16"
+              height="17"
+              viewBox="0 0 16 17"
+              class="fill-text"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section
+        class="flex-center xl:p-default-big p-default bg-secondary py-4 max-sm:px-2 sm:py-[60px] lg:px-24"
+      >
+        <div
+          class="max-md:flex-col-center md:flex-center w-full gap-12 bg-accent pb-[60px] pt-[80px] text-secondary sm:px-8 md:px-[110px] xl:gap-16 xl:py-[120px]"
+        >
+          <h2
+            class="flex-grow-1 flex-shrink-0 font-body text-3xl font-light tracking-tight max-sm:text-center sm:text-4xl lg:text-[40px]/[120%]"
+          >
+            Zostańmy w kontakcie!<br />Znajdziesz nas na
+            <em class="font-medium">Instagramie.</em>
+          </h2>
+          <div
+            class="flex flex-col items-start justify-between gap-6 font-light sm:w-[167px]"
+          >
+            Śledź nasze najnowsze realizacje!
+            <button
+              class="btn-white inline-block font-title font-medium max-sm:m-auto"
+            >
+              Instagram
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="xl:p-default-big p-default mt-[var(--nav-height-mobile)] flex flex-col gap-[90px] bg-text py-[80px] font-light text-secondary sm:mt-[var(--nav-height)] md:gap-[120px] lg:px-[100px]"
+    >
+      <div class="flex flex-col justify-between gap-[60px]">
+        <div
+          class="flex flex-col items-start gap-6 md:flex-row md:items-center"
+        >
+          <img
+            src="./../assets/icons/giarddesign-white.svg"
+            class="logo max-md:w-[111px]"
+            alt="logo"
+          />
+          <p class="text-secondary md:ml-auto">
+            Daj znać, co możemy dla Ciebie zrobić!
+          </p>
+          <button class="btn-green">Skontaktuj się z nami</button>
+        </div>
+        <hr />
+        <div class="flex flex-wrap gap-8 md:flex-nowrap md:gap-12">
+          <a href="#">Kontakt</a>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">LinkedIn</a>
+          <a href="tel:000-000-000" class="md:ml-auto">000-000-000</a>
+          <a href="mailto:giarddesign@kontakt.pl">giarddesign@kontakt.pl</a>
+        </div>
+      </div>
+      <div class="flex flex-col text-secondary max-sm:gap-4 sm:flex-row">
+        <p class="text-secondary">Prawa zastrzeżone © 2022</p>
+        <p class="flex gap-4 text-secondary sm:ml-auto">
+          made by
+          <img
+            src="./../assets/icons/adrespect.svg"
+            class="logo"
+            alt="adrespect logo"
+          />
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
