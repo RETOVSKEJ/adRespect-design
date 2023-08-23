@@ -1,7 +1,3 @@
-// const lastItem = document.querySelector(".grid-masonry-item:last-of-type");
-// lastItem.onload = () => {
-//   console.log("loaded last item");
-// };
 const expandBtn = document.getElementById("expand-btn");
 const grid = document.querySelector(".grid-masonry");
 
@@ -22,7 +18,6 @@ window.addEventListener("load", () => {
 
 const svgArrowVertical = expandBtn.querySelector("svg");
 
-// console.log(svgDown);
 expandBtn.addEventListener("click", (ev) => {
   ev.currentTarget.classList.toggle("expanded");
   // normalnie byłby tu fetch, teraz tylko powtorze te same obrazki
@@ -55,10 +50,3 @@ expandBtn.addEventListener("click", (ev) => {
 masonry.on("layoutComplete", function (items) {
   console.log(items.length);
 });
-
-// window.addEventListener("resize", () => {
-//   if (window.innerWidth < 1440) {
-//     masonry.gutter = 70;
-//     masonry.layout();
-//   }
-// });

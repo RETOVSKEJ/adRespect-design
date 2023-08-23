@@ -55,7 +55,7 @@
     @apply lg:m-default flex flex-col justify-around gap-8 text-text max-md:px-6 md:flex-row md:gap-4 lg:gap-8 xl:gap-16;
   }
   .card {
-    @apply rounded-[28px] bg-white p-10 md:px-8 md:py-10 lg:px-10 lg:py-12;
+    @apply rounded-[28px] bg-white p-10 transition max-md:hover:translate-x-2 md:px-8 md:py-10 md:hover:scale-105 lg:px-10 lg:py-12;
   }
   .card-title {
     @apply mt-8 text-[28px] tracking-tighter;
@@ -64,7 +64,7 @@
     @apply mt-3 text-sm;
   }
   .card-link {
-    @apply relative mt-6 flex w-fit gap-0.5 text-accent after:absolute after:top-[105%] after:h-px after:w-[96%] after:bg-accent lg:mt-16;
+    @apply relative mt-6 flex w-fit gap-0.5 text-accent transition after:absolute after:top-[105%] after:h-px after:w-[96%] after:bg-accent hover:translate-x-2 lg:mt-16;
   }
 
   .grid-gutter-sizer {
@@ -97,6 +97,6 @@
   }
 
   .search-w {
-    @apply w-4/5 sm:w-[240px] lg:w-[280px];
+    @apply w-11/12 sm:w-[240px] lg:w-[280px];
   }
 }
