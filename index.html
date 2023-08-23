@@ -113,7 +113,7 @@
         />
         <div
           id="search-results"
-          class="search-w absolute left-[42px] top-[100%] hidden flex-1 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 peer-focus/results:flex"
+          class="absolute right-0 top-[100%] hidden flex-1 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 peer-focus/results:flex"
         >
           <ul
             class="border-1px flex-1 flex-col divide-y rounded-sm border bg-white"
@@ -281,7 +281,9 @@
         </div>
       </div>
     </nav>
-    <main class="relative z-10 font-medium sm:top-[var(--nav-height)]">
+    <main
+      class="relative z-10 overflow-x-hidden font-medium sm:top-[var(--nav-height)]"
+    >
       <header
         id="carousel"
         class="carousel relative flex w-full transition duration-[1500ms] ease-in-out"
@@ -296,7 +298,7 @@
           >
             <h2
               id="header__title"
-              class="pc:text-6xl/[70px] font-title text-[28px] sm:text-4xl lg:text-5xl"
+              class="font-title text-[28px] sm:text-4xl lg:text-5xl pc:text-6xl/[70px]"
             >
               Nowoczesna aranżacja Twojego ogrodu
             </h2>
@@ -320,7 +322,7 @@
             </div>
           </div>
           <img
-            class="h-full max-h-[450px] w-full object-cover max-md:order-2 md:max-h-[780px] md:w-1/2 xl:max-h-[740px]"
+            class="h-full max-h-[380px] w-full object-cover max-md:order-2 md:max-h-[780px] md:w-1/2 xl:max-h-[740px]"
             src="./assets/images/header.png"
           />
         </div>
@@ -334,7 +336,7 @@
           >
             <h2
               id="header__title"
-              class="pc:text-6xl/[70px] font-title text-[28px] sm:text-4xl lg:text-5xl"
+              class="font-title text-[28px] sm:text-4xl lg:text-5xl pc:text-6xl/[70px]"
             >
               Nowoczesna aranżacja Twojego ogrodu
             </h2>
@@ -357,7 +359,7 @@
             </div>
           </div>
           <img
-            class="h-full max-h-[450px] w-full object-cover max-md:order-2 md:max-h-[780px] md:w-1/2 xl:max-h-[740px]"
+            class="h-full max-h-[380px] w-full object-cover max-md:order-2 md:max-h-[780px] md:w-1/2 xl:max-h-[740px]"
             src="./assets/images/header.png"
           />
         </div>
@@ -371,7 +373,7 @@
           >
             <h2
               id="header__title"
-              class="pc:text-6xl/[70px] font-title text-[28px] sm:text-4xl lg:text-5xl"
+              class="font-title text-[28px] sm:text-4xl lg:text-5xl pc:text-6xl/[70px]"
             >
               Nowoczesna aranżacja Twojego ogrodu
             </h2>
@@ -394,7 +396,7 @@
             </div>
           </div>
           <img
-            class="h-full max-h-[450px] w-full object-cover max-md:order-2 md:max-h-[780px] md:w-1/2 xl:max-h-[740px]"
+            class="h-full max-h-[380px] w-full object-cover max-md:order-2 md:max-h-[780px] md:w-1/2 xl:max-h-[740px]"
             src="./assets/images/header.png"
           />
         </div>
@@ -654,11 +656,11 @@
             <img src="./assets/images/Photo-10.png" class="gallery-photo" />
             <button
               id="gallery-prev"
-              class="absolute left-0 top-[45%] h-20 w-10 bg-black/30 hover:bg-black/60"
+              class="absolute left-0 top-[45%] h-20 w-10 bg-black/40 hover:bg-black/60"
             ></button>
             <button
               id="gallery-next"
-              class="absolute right-0 top-[45%] h-20 w-10 bg-black/30 hover:bg-black/60"
+              class="absolute right-0 top-[45%] h-20 w-10 bg-black/40 hover:bg-black/60"
             ></button>
             <div id="dots" class="text-center"></div>
             <button

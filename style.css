@@ -5,7 +5,7 @@
 @layer components {
   button,
   a {
-    @apply hover:brightness-125;
+    @apply text-center hover:brightness-125;
   }
 
   :where(h2, h3) {
@@ -55,10 +55,10 @@
     @apply lg:m-default flex flex-col justify-around gap-8 text-text max-md:px-6 md:flex-row md:gap-4 lg:gap-8 xl:gap-16;
   }
   .card {
-    @apply rounded-[28px] bg-white p-10 transition max-md:hover:translate-x-2 md:px-8 md:py-10 md:hover:scale-105 lg:px-10 lg:py-12;
+    @apply rounded-[28px] bg-white p-8 transition max-md:hover:translate-x-2 sm:p-10 md:px-8 md:py-10 md:hover:scale-105 lg:px-10 lg:py-12;
   }
   .card-title {
-    @apply mt-8 text-[28px] tracking-tighter;
+    @apply mt-4  text-[28px] tracking-tighter sm:mt-8;
   }
   .card-desc {
     @apply mt-3 text-sm;
