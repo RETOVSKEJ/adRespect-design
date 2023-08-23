@@ -941,9 +941,6 @@ button:hover,
 .mt-0\.5 {
   margin-top: 0.125rem;
 }
-.mt-10 {
-  margin-top: 2.5rem;
-}
 .mt-12 {
   margin-top: 3rem;
 }
@@ -1546,10 +1543,6 @@ button:hover,
   .max-sm\:px-2 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-  }
-
-  .max-sm\:pt-4 {
-    padding-top: 1rem;
   }
 
   .max-sm\:text-center {
