@@ -26,6 +26,10 @@ a:visited {
   transform: scaleY(-1);
 }
 
+.text-align-initial {
+  text-align: initial;
+}
+
 /* HAMBURGER */
 
 #menu-button {

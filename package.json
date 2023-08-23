@@ -4,9 +4,9 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "build": "postcss style.css -o output.css",
+    "build": "postcss input.css -o ./static/output.css",
     "prod": "watch \"npm run build\" .",
-    "dev": "tailwindcss -i style.css -o output.css --watch"
+    "dev": "tailwindcss -i input.css -o ./static/output.css --watch"
   },
   "keywords": [],
   "author": "",

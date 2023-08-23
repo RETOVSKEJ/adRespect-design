@@ -69,3 +69,13 @@ function showPhotos(n) {
   photos[photoIndex - 1].style.display = "block";
   dots[photoIndex - 1].className += " active";
 }
+
+modal.addEventListener("click", (ev) => {
+  const rect = modal.getBoundingClientRect();
+  const isInModal =
+    rect.top <= ev.clientY &&
+    ev.clientY <= rect.top + rect.height &&
+    rect.left <= ev.clientX &&
+    ev.clientX <= rect.left + rect.width;
+  if (!isInModal) modal.close();
+});

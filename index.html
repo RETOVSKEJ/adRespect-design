@@ -4,14 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zadanie Rekrutacyjne AdRespect - Michał Silski</title>
-    <link rel="stylesheet" href="./globals.css" />
-    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="./static/globals.css" />
+    <link rel="stylesheet" href="./static/output.css" />
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-    <script src="./script.js" defer></script>
-    <script src="./searchBar.js" defer></script>
-    <script src="./carousel.js" defer></script>
-    <script src="./gallery.js" defer></script>
+    <script src="./static/script.js" defer></script>
+    <script src="./static/searchBar.js" defer></script>
+    <script src="./static/dropdowns.js" defer></script>
+    <script src="./static/carousel.js" defer></script>
+    <script src="./static/gallery.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -52,15 +54,15 @@
               ><img class="mx-1" src="./assets/icons/downtick.svg" />
             </button>
             <ul
-              id="dropdown"
-              class="dropdown-offer absolute left-[110px] top-[90%] z-50 hidden w-max flex-col divide-y rounded-xl border bg-white text-lg peer-focus-within:flex peer-focus-within:translate-y-2"
+              id="dropdown-mb"
+              class="dropdown-offer absolute left-[110px] top-[50%] z-50 hidden w-max flex-col divide-y rounded-xl border bg-white peer-focus-within:flex peer-focus-within:translate-y-2"
             >
               <li class="group px-5 py-4">
                 <a
                   class="flex items-center gap-6 transition group-hover:translate-x-2"
                   href="#offer"
                 >
-                  <img src="./assets/icons/pencil.svg" class="w-8" />
+                  <img src="./assets/icons/pencil.svg" class="w-7" />
                   <span>Projekty</span>
                 </a>
               </li>
@@ -69,7 +71,7 @@
                   class="flex items-center gap-6 transition group-hover:translate-x-2"
                   href="#offer"
                 >
-                  <img src="./assets/icons/eye.svg" class="w-8" />
+                  <img src="./assets/icons/eye.svg" class="w-7" />
                   <span>Wizualizacje</span>
                 </a>
               </li>
@@ -78,7 +80,7 @@
                   class="flex items-center gap-6 transition group-hover:translate-x-2"
                   href="#offer"
                 >
-                  <img src="./assets/icons/stars.svg" class="w-8" />
+                  <img src="./assets/icons/stars.svg" class="w-7" />
                   <span>Realizacje</span>
                 </a>
               </li>
@@ -112,8 +114,8 @@
           class="peer/results focus:search-w peer-focus-within:search-w w-0 rounded-lg py-2 outline-none transition-[width] focus:border focus:border-gray-200 focus:px-2 peer-focus-within:border peer-focus-within:border-gray-200"
         />
         <div
-          id="search-results"
-          class="absolute right-0 top-[100%] hidden flex-1 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 peer-focus/results:flex"
+          id="search-results-mb"
+          class="search-results absolute right-0 top-[100%] hidden flex-1 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 peer-focus/results:flex"
         >
           <ul
             class="border-1px flex-1 flex-col divide-y rounded-sm border bg-white"
@@ -148,7 +150,7 @@
             <li class="group px-8 py-4">
               <a
                 class="flex items-center gap-6 transition group-hover:translate-x-2"
-                href="#Ofirmie"
+                href="#ofirmie"
               >
                 <span>O firmie</span>
               </a>
@@ -184,14 +186,14 @@
         </button>
         <ul
           id="dropdown"
-          class="dropdown-offer absolute left-[-110%] top-[150%] z-50 hidden w-max flex-col divide-y rounded-xl border bg-white text-lg peer-focus-within:flex peer-focus-within:translate-y-2"
+          class="dropdown-offer absolute left-[-130%] top-[150%] z-50 hidden w-max flex-col divide-y rounded-xl border bg-white text-base peer-focus-within:flex peer-focus-within:translate-y-2"
         >
           <li class="group px-8 py-6">
             <a
               class="flex items-center gap-6 transition group-hover:translate-x-2"
               href="#offer"
             >
-              <img src="./assets/icons/pencil.svg" class="w-8" />
+              <img src="./assets/icons/pencil.svg" class="w-7" />
               <span>Projekty</span>
             </a>
           </li>
@@ -200,7 +202,7 @@
               class="flex items-center gap-6 transition group-hover:translate-x-2"
               href="#offer"
             >
-              <img src="./assets/icons/eye.svg" class="w-8" />
+              <img src="./assets/icons/eye.svg" class="w-7" />
               <span>Wizualizacje</span>
             </a>
           </li>
@@ -209,7 +211,7 @@
               class="flex items-center gap-6 transition group-hover:translate-x-2"
               href="#offer"
             >
-              <img src="./assets/icons/stars.svg" class="w-8" />
+              <img src="./assets/icons/stars.svg" class="w-7" />
               <span>Realizacje</span>
             </a>
           </li>
@@ -229,7 +231,7 @@
         />
         <div
           id="search-results"
-          class="search-w absolute left-[36px] top-[100%] hidden flex-1 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 peer-focus/results:flex"
+          class="search-results search-w absolute left-[36px] top-[100%] hidden flex-1 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 peer-focus/results:flex"
         >
           <ul
             class="border-1px flex-1 flex-col divide-y rounded-sm border bg-white"
@@ -264,7 +266,7 @@
             <li class="group px-8 py-4">
               <a
                 class="flex items-center gap-6 transition group-hover:translate-x-2"
-                href="#Ofirmie"
+                href="#ofirmie"
               >
                 <span>O firmie</span>
               </a>
@@ -477,7 +479,7 @@
               Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i
               zaawansowanych technologii.
             </p>
-            <a href="#realizacje" class="card-link"
+            <a href="#realizacje" class="card-link text-align-initial"
               >Zobacz nasze realizacje
               <img src="./assets/icons/arrow-right-sm.svg" class="icon" />
             </a>

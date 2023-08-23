@@ -4,6 +4,8 @@ const searchBar = document.getElementById("search-bar-mb");
 const searchCloseImg = document.getElementById("search-close-img");
 const hamburgerBtn = document.getElementById("hamburger-btn");
 
+// MOBILE searchbar listeners for animations
+
 searchBtn.addEventListener("click", () => {
   searchInput.classList.toggle("active");
   searchBtn.classList.toggle("active");
